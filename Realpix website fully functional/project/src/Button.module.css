@@ -1,0 +1,103 @@
+.button {
+  position: absolute;
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #18181b;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.button:hover {
+  transform: translateY(-50%) scale(1.1);
+  background-color: #27272a;
+}
+
+.sparkleIcon {
+  width: 16px;
+  height: 16px;
+  animation: sparkle 1.5s linear infinite;
+}
+
+.buttonText {
+  font-weight: 500;
+  background: linear-gradient(to right, #fff, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+}
+
+.button:hover .buttonText {
+  animation: shine 1.5s linear infinite;
+}
+
+.downloadButton {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  font-weight: 500;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageContainer:hover .downloadButton {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.downloadButton:hover {
+  background-color: #6d28d9;
+  transform: translateX(-50%) translateY(0) scale(1.1);
+}
+
+.downloadIcon {
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shine {
+  from {
+    background: linear-gradient(to right, #fff, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  to {
+    background: linear-gradient(to right, #fff, #a855f7, #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
